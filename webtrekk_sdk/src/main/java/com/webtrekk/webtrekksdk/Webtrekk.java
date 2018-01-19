@@ -612,13 +612,13 @@ public class Webtrekk implements ActivityListener.Callback {
     /**
      * Retruns recommendation object that can be used to query recommendation(s)
      * Each time method returns new instance of recommendation object that is initialized accornding to
-     * configuration xml. Using WebtrekkRecommendations object you can have independed several recommendation
+     * configuration xml. Using WebtrekkRecmmtn object you can have independed several recommendation
      * request.
-     * @return WebtrekkRecommendations object
+     * @return WebtrekkRecmmtn object
      */
-    public WebtrekkRecommendations getRecommendations()
+    public WebtrekkRecmmtn getRecommendations()
     {
-        return new WebtrekkRecommendations(trackingConfiguration, mContext);
+        return new WebtrekkRecmmtn(trackingConfiguration, mContext);
     }
 
 
