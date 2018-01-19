@@ -43,12 +43,13 @@ public class ShopExampleActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_example);
 
+        webtrekk = Webtrekk.getInstance();
+
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             String everID = bundle.getString("everID"); // "everID"
             String mediaCode = bundle.getString("mediaCode"); // "MediaCode"
 
-            webtrekk = Webtrekk.getInstance();
             webtrekk.setEverId(everID);
             webtrekk.setMediaCode(mediaCode);
         }
