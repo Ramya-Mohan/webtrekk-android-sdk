@@ -43,8 +43,11 @@ public class PermissionRequest {
                 completables.add(Completable.complete());
             }
         }
-
-        ActivityCompat.requestPermissions(activity,
+        /** If permissions are already granted the permission result list will be empty.
+         *  Hence Check is necessary.
+         */
+        if(permissionsResult.size() > 0)
+            ActivityCompat.requestPermissions(activity,
                 permissionsResult.toArray(new String[permissionsResult.size()]), PERMISSION_REQUEST);
 
         return completables;
